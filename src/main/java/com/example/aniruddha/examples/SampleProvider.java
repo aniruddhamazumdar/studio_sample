@@ -9,9 +9,12 @@ import android.net.Uri;
  * Created by aniruddha on 26/11/14.
  */
 public class SampleProvider extends ContentProvider {
+    SampleDatabaseHelper mDBHelper;
+
     @Override
     public boolean onCreate() {
-        return false;
+        mDBHelper = new SampleDatabaseHelper(getContext());
+        return true;
     }
 
     @Override

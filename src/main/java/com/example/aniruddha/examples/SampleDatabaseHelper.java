@@ -18,11 +18,12 @@ public class SampleDatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-
+        db.execSQL(Samples.SQL_CREATE);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
+        db.execSQL(Samples.SQL_DELETE);
+        db.execSQL(Samples.SQL_CREATE);
     }
 }
