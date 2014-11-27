@@ -7,6 +7,13 @@ import java.io.Serializable;
  */
 public class Samples {
 
+    public static final String TABLE_NAME = "sample";
+
+    public static final String COL_ID = "_id";
+    public static final String COL_NAME = "name";
+    public static final String COL_CREATED = "created";
+    public static final String COL_MODIFIED = "modified";
+
     public static class Sample implements Serializable {
         public int id;
         public String name;
